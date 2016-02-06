@@ -1,0 +1,28 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <math.h>
+#include <stdlib.h>
+#include <iostream>
+
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+
+	int a, b;
+	
+	printf ("Введите два целых числа: ");
+	scanf ("%d%d", &a, &b);
+
+	if (a > b)
+		printf ("%d большее число", a);
+
+	if (a < b)
+		printf ("%d большее число", b);
+
+	if (a == b)
+		puts ("Эти числа равны");
+
+	_getch ();
+  return 0;
+}
