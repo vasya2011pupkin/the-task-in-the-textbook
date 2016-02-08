@@ -1,0 +1,22 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   int a; 
+   
+   printf( "Введите число: " ); 
+   scanf( "%d", &a ); 
+
+	if (a % 2 == 0)
+		printf ("%d - Чётное число", a);
+
+	if (a % 2 == 1)
+	   printf ("%d - Не чётное число", a);
+
+   _getch ();
+} 
