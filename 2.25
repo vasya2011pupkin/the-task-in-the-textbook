@@ -1,0 +1,14 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   printf ("s   s   s   m       m\ns   s   s   mm     mm\ns   s   s   m m   m m\ns   s   s   m  m m  m\ns   s   s   m   m   m\ns   s   s   m       m\ns   s   s   m       m\ns   s   s   m       m\ns   s   s   m       m\nsssssssss s m       m m\n");
+
+   _getch ();
+
+} 
