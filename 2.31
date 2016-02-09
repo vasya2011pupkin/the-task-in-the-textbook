@@ -1,0 +1,40 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   int a;
+
+	 printf ("Введите числа от '0' до '10'\n\n\n");
+
+	 printf ("Число\tКвадрат\tКуб\n");
+
+	 scanf ("%d", &a);
+	 printf ("\t%d\t%d\n", a * a, a * a * a);
+	 scanf ("%d", &a);
+	 printf ("\t%d\t%d\n", a * a, a * a * a);
+	 scanf ("%d", &a);
+	 printf ("\t%d\t%d\n", a * a, a * a * a);
+	 scanf ("%d", &a);
+	 printf ("\t%d\t%d\n", a * a, a * a * a);
+	 scanf ("%d", &a);
+	 printf ("\t%d\t%d\n", a * a, a * a * a);
+	 scanf ("%d", &a);
+	 printf ("\t%d\t%d\n", a * a, a * a * a);
+	 scanf ("%d", &a);
+	 printf ("\t%d\t%d\n", a * a, a * a * a);
+	 scanf ("%d", &a);
+	 printf ("\t%d\t%d\n", a * a, a * a * a);
+	 scanf ("%d", &a);
+	 printf ("\t%d\t%d\n", a * a, a * a * a);
+	 scanf ("%d", &a);
+	 printf ("\t%d\t%d\n", a * a, a * a * a);
+	 scanf ("%d", &a);
+	 printf ("\t%d\t%d\n", a * a, a * a * a);
+
+   _getch ();
+} 
