@@ -1,0 +1,24 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   float val_pr;
+
+   printf ("%s", "Введите сумму продаж (-1, если ввод закончен): ");
+   scanf ("%f", &val_pr);
+
+   while (val_pr != -1) {
+	   printf ("Зарлата: %.2f", 200 + val_pr * 0.09);
+
+	   printf ("%s", "\n\nВведите сумму продаж (-1, если ввод закончен): ");
+	   scanf ("%f", &val_pr);
+   }
+
+   _getch ();
+} 
