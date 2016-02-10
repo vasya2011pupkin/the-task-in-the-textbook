@@ -1,0 +1,39 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   int chasi;
+   float tarif;
+
+   printf ("%s", "Введите количество отработанных часов (-1, если ввод закончен): ");
+   scanf ("%d", &chasi);
+
+   if (chasi != -1) {
+	   printf ("%s", "Введите почасовой тариф работника: ");
+	   scanf ("%f", &tarif);
+   }
+
+   while (chasi != -1) {
+
+	   if (chasi <= 40)
+	      printf ("Зарплата составляет: %.2f\n\n", chasi * tarif);
+	   else
+		   printf ("Зарплата составляет: %.2f\n\n", 40 * tarif + (chasi - 40) * tarif * 1.5);
+
+	   printf ("%s", "Введите количество отработанных часов (-1, если ввод закончен): ");
+     scanf ("%d", &chasi);
+
+     if (chasi != -1) {
+	     printf ("%s", "Введите почасовой тариф работника: ");
+	     scanf ("%f", &tarif);
+	   }
+   }
+
+   _getch ();
+} 
