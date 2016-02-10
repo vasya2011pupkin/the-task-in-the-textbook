@@ -1,0 +1,59 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   int schet;
+   float nach_bal, rashod, kredit, max_bal;
+
+   printf_s ("Введите номер счёта (-1 для выхода): ");
+   scanf_s ("%d", &schet);
+
+   if (schet != -1) {
+	   printf_s ("Введите начальный баланс: ");
+	   scanf_s ("%f", &nach_bal);
+
+     printf_s ("Введите сумму расходов: ");
+	   scanf_s ("%f", &rashod);
+
+	   printf_s ("Введите сумму кредита: ");
+	   scanf_s ("%f", &kredit);
+
+	   printf_s ("Введите максимальный размер баланса: ");
+	   scanf_s ("%f", &max_bal);
+	}
+
+	while (schet != -1) {
+
+		if (nach_bal + rashod - kredit > max_bal) {
+			printf_s ("Счёт: %d\n", schet);
+			printf_s ("Максимальный размер баланса: %f\n", max_bal);
+			printf_s ("Текущий баланс: %f\n", nach_bal + rashod - kredit);
+			puts ("Предельный размер баланса ПРЕВЫШЕН !!!");
+		}
+
+		printf_s ("\nVvedite nomer scheta (-1 dla vihoda): ");
+		scanf_s ("%d", &schet);
+
+		if (schet != -1) {
+			printf_s ("Введите начальный баланс: ");
+			scanf_s ("%f", &nach_bal);
+
+			printf_s ("Введите сумму расходов: ");
+			scanf_s ("%f", &rashod);
+
+			printf_s ("Введите сумму кредита: ");
+			scanf_s ("%f", &kredit);
+
+			printf_s ("Введите максимальный размер баланса: ");
+			scanf_s ("%f", &max_bal);
+		}
+	}
+	
+   _getch ();
+} 
