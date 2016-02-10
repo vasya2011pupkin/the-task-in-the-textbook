@@ -1,0 +1,42 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   int i = 0;
+   float mil, gal, sum = 0;
+
+   printf_s ("Введите сколько галонов заправили (-1 для выхода): ");
+   scanf_s ("%f", &gal );
+	
+   if (gal != -1){
+
+	   printf_s ("Введите сколько миль проехали: ");
+	   scanf_s ("%f", &mil );
+   }
+  
+   while (gal != -1) {
+      printf_s ("Для этой заправки Миль/Галон: %f\n\n", mil / gal);
+      sum += mil / gal;
+      
+      printf_s ("Введите сколько галонов заправили (-1 для выхода): ");
+      scanf_s ("%f", &gal );
+      if (gal != -1){
+         printf_s ("Введите сколько миль проехали: ");
+         scanf_s ("%f", &mil );
+      }
+	 ++i;
+	 }
+
+   if (i != 0)
+	   printf_s ("\nСреднее число Миль/Галон: %f", sum / i);
+   else 
+	   puts ("\nНебыло ввода данных");
+
+   _getch ();
+} 
