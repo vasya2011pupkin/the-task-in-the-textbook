@@ -1,0 +1,38 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   float suda, stavka, srok;
+
+   printf ("%s", "Введите сумму ссуды (-1, если ввод закончен): ");
+   scanf ("%f", &suda);
+
+   if (suda != -1) {
+	   printf ("%s", "Введите процентную ставку: ");
+	   scanf ("%f", &stavka);
+	   printf ("%s", "Введите срок ссуды в днях: ");
+     scanf ("%f", &srok);
+   }
+
+   while (suda != -1) {
+	   printf ("Выплата по простым процентам состовляет: %.2f\n\n", suda * stavka * srok / 365);
+
+	   printf ("%s", "Введите сумму ссуды (-1, если ввод закончен): ");
+     scanf ("%f", &suda);
+
+     if (suda != -1) {
+		   printf ("%s", "Введите процентную ставку: ");
+		   scanf ("%f", &stavka);
+	     printf ("%s", "Введите срок ссуды в днях: ");
+       scanf ("%f", &srok);
+	   }
+   }
+
+   _getch ();
+} 
