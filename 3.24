@@ -1,0 +1,27 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   int i = 1, a, max = 0;
+
+   while (i <= 10) {
+	   printf ("Введите %d число: ", i);
+	   scanf ("%d", &a); 
+
+	   if (a > max)
+		   max = a;
+
+	   ++i;
+			
+   }
+
+   printf ("Большее число: %d", max);
+
+   _getch ();
+} 
