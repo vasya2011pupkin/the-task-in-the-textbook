@@ -1,0 +1,21 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   int i = 1;
+
+   printf ("N\t10*N\t100*N\t1000*N\n\n");
+
+   while (i <= 10) {
+	   printf ("%d\t%d\t%d\t%d\t\n", i, 10 * i, 100 * i, 1000 * i);
+	   ++i;
+   }
+
+   _getch ();
+} 
