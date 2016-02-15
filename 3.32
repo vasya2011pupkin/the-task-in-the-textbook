@@ -1,0 +1,23 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+
+
+int main( void )
+{
+   setlocale(LC_ALL, "Russian");
+
+   int x = 5, y = 8;
+
+   if (y == 8) 
+	   if (x == 5)
+		   printf_s ("%s", "@@@@@\n");
+   
+	   else 
+		   printf_s ("%s", "#####\n");
+		   printf_s ("%s", "$$$$$\n");
+		   printf_s ("%s", "&&&&&\n"); 
+	   
+   _getch ();
+} 
