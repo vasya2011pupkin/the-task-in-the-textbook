@@ -1,0 +1,40 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	
+    int a = 1, b, x;
+
+	   printf ("Введите размер стороны квадрата: ");
+	   scanf ("%d", &x);
+	   puts ("");
+
+	   while (a <= x) {
+		   b = 1;
+
+		   if (a == 1 || a == x)
+			   while (b <= x) {
+				   printf ("%s", "$");
+			     b++;
+			   }    
+		   else
+			   while (b <= x) {
+				   if (b == 1 || b == x)
+					   printf ("%s", "$");
+				   else 
+					   printf ("%s", " ");
+
+				   ++b;
+			   }
+
+		   puts ("");
+		   a++;
+	   }
+	 
+	_getch ();
+	return 0;
+}
