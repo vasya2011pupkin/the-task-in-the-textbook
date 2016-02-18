@@ -1,0 +1,35 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   int a, x1, x2, x3, x4, x5;
+
+   printf ("Введите число: ");
+   scanf ("%d", &a);
+
+	x1 = a / 10000;
+
+	x2 = a % 10000 / 1000;
+
+	x3 = a % 10000 % 1000 / 100;
+
+	x4 = a % 10000 % 1000 % 100 / 10;
+
+	x5 = a % 10000 % 1000 % 100 % 10;
+
+	printf ("\t\t\t%d   %d   %d   %d   %d", x1, x2, x3, x4, x5);
+
+	if (x1 == x5 && x2 == x4)
+		printf_s ("\n\n\t\t   Является ПОЛИНДРОМОМ !!!!");
+	else
+		printf_s ("\n\n\t\t        Не Полиндром !!!!");
+		
+   _getch ();
+} 
