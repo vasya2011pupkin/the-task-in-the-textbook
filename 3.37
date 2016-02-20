@@ -1,0 +1,32 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   unsigned int i, k = 1;
+
+   while (k <= 10) {
+	
+	   i = 1;
+
+	   while (i <= 240000000) {
+			if (i % 240000000 == 0)
+			printf_s ("%d\n", i);
+
+			++i;
+	  // if (i / 240000000 == 1)
+		//   i = 1;
+		}
+
+	   ++k;
+
+   }
+
+   _getch ();
+} 
