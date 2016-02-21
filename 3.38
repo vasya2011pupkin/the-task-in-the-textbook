@@ -1,0 +1,25 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   unsigned int i = 1;
+
+   while (i <= 100) {
+	
+	   printf_s ("%s", "*");
+
+	   if (i % 10 == 0)
+		   puts ("");
+	   ++i;
+
+   }
+
+   _getch ();
+} 
