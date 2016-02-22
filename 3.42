@@ -1,0 +1,21 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   float rad; 
+   
+   printf( "Введите радиус: " ); 
+   scanf( "%f", &rad ); 
+   printf ("Диаметр окружности = %.2f\n", rad * 2 );
+   printf ("Периметр окружности = %.2f\n",  rad * 2 * 3.14159);
+   printf ("Площадь круга = %.2f\n", rad * rad * 3.14159 );
+
+   _getch ();
+} 
