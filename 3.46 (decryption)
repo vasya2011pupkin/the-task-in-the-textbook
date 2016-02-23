@@ -1,0 +1,44 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   int a, x1, x2, x3, x4, x5, vr;
+
+   printf ("Введите число = ");
+   scanf ("%d", &a);
+
+	x1 = a / 10000;
+
+	x2 = a % 10000 / 1000;
+
+	x3 = a % 10000 % 1000 / 100;
+
+	x4 = a % 10000 % 1000 % 100 / 10;
+
+	x5 = a % 10000 % 1000 % 100 % 10;
+
+	x2 = (x2 + 3) % 10;
+	x3 = (x3 + 3) % 10;
+	x4 = (x4 + 3) % 10;
+	x5 = (x5 + 3) % 10;
+	vr = x2;
+	x2 = x4;
+	x4 = vr;
+	vr = x3;
+	x3 = x5;
+	x5 = vr;
+
+	if (x1 > 0)
+		printf_s ("%s", "Вы ввели не 4-х значное число");
+	else
+		printf ("%d%d%d%d", x2, x3, x4, x5);
+
+   _getch ();
+} 
