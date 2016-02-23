@@ -1,0 +1,15 @@
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+#include <math.h>
+#include <stdlib.h>
+
+
+int main( void )
+{
+   int x = 1, y = 3; 
+   
+	printf_s ("%d", (x + y) + 1 );
+
+   _getch ();
+} 
