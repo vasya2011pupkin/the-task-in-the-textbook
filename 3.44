@@ -1,0 +1,28 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   float x, y, z; 
+   
+	printf_s ("%s", "Введите размеры сторон треугольника (0 нельзя): \n");
+	scanf_s ("%f%f%f", &x, &y, &z);
+
+	if (x == 0 || y == 0 || z == 0)
+		printf_s ("%s", "Одно или несколько значений не коректны");
+	else {
+		if (x < y + z && y < x + z && z < x + y)
+			printf_s ("Треугольник с такими сторонами можно построить !!!");
+		else
+			printf_s ("Нельзя построить треугольник с такими сторонами !!!");
+
+	}
+
+   _getch ();
+} 
