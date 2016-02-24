@@ -1,0 +1,28 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   int x, y, i, sum = 0;
+
+   printf ("Введите количество суммируемых чисел: ");
+   scanf ("%d", &x);
+
+   puts ("");
+
+   for (i = 1; i <= x; i++) {
+	   printf ("Введите %d число: ", i);
+	   scanf ("%d", &y);
+	   sum += y;
+   }
+
+   printf ("\nСумма %d чисел = %d", i - 1, sum);
+  
+   _getch ();
+} 
