@@ -1,0 +1,20 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   int x, sum = 0;
+
+   for (x = 2; x <= 30; x += 2)
+	   sum +=x;
+
+   printf ("Сумма чётных чисел от 2 до 30 = %d", sum);
+	 
+   _getch ();
+} 
