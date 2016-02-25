@@ -1,0 +1,26 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   int x, y, i, min = INT_MAX;
+
+   printf ("Укажите количество вводимых чисел: ");
+   scanf ("%d", &x);
+
+   for (i = 1; i <= x; i++) {
+	   printf ("Введите %d число: ", i);
+	   scanf ("%d", &y);
+	   if (min > y)
+		   min = y;
+   }
+   printf ("Наменьшее число из %d введённых: %d", i - 1, min);
+
+   _getch ();
+} 
