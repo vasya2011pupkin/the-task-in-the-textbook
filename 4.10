@@ -1,0 +1,27 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   int x, i = 0, sum = 0;
+
+   printf ("Введите числа, для определения среднего числя для них (9999 для выхода): ");
+   scanf ("%d", &x);
+
+   while (x != 9999) {
+	   sum += x;
+	   printf ("Следующие число (9999 для выхода): ");
+	   scanf ("%d", &x);
+	   i++;
+   }
+
+   printf ("Среднее значение %d чисел = %d", i, sum / i);
+
+   _getch ();
+} 
