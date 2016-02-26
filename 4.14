@@ -1,0 +1,27 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   unsigned int x, i, fak;
+
+   printf ("n\t\tn!\n\n");
+
+   for (x = 1; x <= 12; x++) { //Факториал больше 12 переполняет беззнаковый int
+	   i = x;
+	   fak = 1;
+	   while (i > 0) {
+	      fak *= i;
+		    i--;
+	   }
+	   printf ("%d\t\t%u\n", x, fak);
+   }
+
+   _getch ();
+} 
