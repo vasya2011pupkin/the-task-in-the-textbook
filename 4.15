@@ -1,0 +1,26 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   double sumf, sumn = 1000, stavka = 0.05;
+   unsigned int year;
+   
+   for (stavka = 5; stavka <= 10; stavka++)  {
+
+      printf ("\n%4s%21s\tСтавка: %.2f\n", "Год", "Сумма на депозите", stavka / 100);
+
+         for (year = 1; year <= 10; year++) {
+	         sumf = sumn * pow (1.0 + stavka / 100, (double) year);
+	         printf ("%4d%21.2f\n", year, sumf);
+         }
+   }
+
+   _getch ();
+} 
