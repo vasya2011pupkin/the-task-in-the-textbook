@@ -1,0 +1,60 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   int a, i, x;
+
+   for (a = 1; a <= 10; a++) {
+
+	   for (i = a; i >= 1; i--)
+		   printf ("%s", "*");
+
+	   puts ("");
+   }
+
+   puts ("");
+   puts ("");
+
+   for (a = 10; a >= 1; a--) {
+
+	   for (i = a; i >= 1; i--)
+		   printf ("%s", "*");
+
+	   puts ("");
+   }
+
+   puts ("");
+   puts ("");
+
+   for (a = 10; a >= 1; a--) {
+
+	   for (x = 10 - a; x >= 1; x--)
+		   printf ("%s", " ");
+	   for (i = a; i >= 1; i--)
+		   printf ("%s", "*");
+
+	   puts ("");
+   }
+
+   puts ("");
+   puts ("");
+
+   for (a = 1; a <= 10; a++) {
+
+	   for (x = 10 - a; x >= 1; x--)
+		   printf ("%s", " ");
+	   for (i = a; i >= 1; i--)
+		   printf ("%s", "*");
+
+	   puts ("");
+   }
+
+   _getch ();
+} 
