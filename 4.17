@@ -1,0 +1,30 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   int nom, i;
+   float predeld, balans;
+
+   for (i = 1; i <= 3; i++) {
+	   printf ("%s", "Введите номер счёта клиента: ");
+     scanf ("%d", &nom);
+	   printf ("%s", "Введите текущий предел кредита: ");
+	   scanf ("%f", &predeld);
+	   printf ("%s", "Введите текущий баланс ");
+	   scanf ("%f", &balans);
+
+	   printf ("\nНовый предел кредита: %.2f\n", predeld / 2);
+
+	   if (balans > predeld / 2)
+		   printf ("Баланс клиента №%d превышает новый предел кредита\n\n\n", nom);
+   }
+
+   _getch ();
+} 
