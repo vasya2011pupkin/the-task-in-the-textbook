@@ -1,0 +1,28 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   int x, i;
+
+   printf ("Вводите числа (-1 для выхода): ");
+   scanf ("%d", &x);
+
+   while (x != -1) {
+
+      for (i = 1; i <= x; i ++) {
+	      printf ("*");
+	  }
+
+      puts ("");
+      scanf ("%d", &x);
+   }
+
+   _getch ();
+} 
