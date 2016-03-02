@@ -16,11 +16,10 @@ int main()
    unsigned int dCount = 0; 
    unsigned int fCount = 0; 
 
-   puts( "Введите симольные оценки"  );
-   puts( "Введите EOF символ для выхода."  );
+   puts( "Р’РІРµРґРёС‚Рµ СЃРёРјРѕР»СЊРЅС‹Рµ РѕС†РµРЅРєРё"  );
+   puts( "Р’РІРµРґРёС‚Рµ EOF СЃРёРјРІРѕР» РґР»СЏ РІС‹С…РѕРґР°."  );
 
    while ( ( grade = getchar() ) != EOF ) {
-      
       
       switch ( grade ) { 
 
@@ -55,13 +54,13 @@ int main()
             break; 
 
          default: 
-            printf( "%s", "Введена неправильная буквенная оценка." ); 
-            puts( " Введите новую оценку." ); 
+            printf( "%s", "Р’РІРµРґРµРЅР° РЅРµРїСЂР°РІРёР»СЊРЅР°СЏ Р±СѓРєРІРµРЅРЅР°СЏ РѕС†РµРЅРєР°." ); 
+            puts( " Р’РІРµРґРёС‚Рµ РЅРѕРІСѓСЋ РѕС†РµРЅРєСѓ." ); 
             break; 
       } 
    } 
 
-   puts( "\nИтоговые данные по каждой буквенной оценке:" );
+   puts( "\nРС‚РѕРіРѕРІС‹Рµ РґР°РЅРЅС‹Рµ РїРѕ РєР°Р¶РґРѕР№ Р±СѓРєРІРµРЅРЅРѕР№ РѕС†РµРЅРєРµ:" );
    printf( "A: %u\n", aCount ); 
    printf( "B: %u\n", bCount ); 
    printf( "C: %u\n", cCount ); 
@@ -72,19 +71,19 @@ int main()
    i = aCount + bCount + cCount + dCount + fCount;
    
    if (sum / i >= 90)
-	   printf ("Средняя оценка %d - A", sum / i);
+	   printf ("РЎСЂРµРґРЅСЏСЏ РѕС†РµРЅРєР° %d - A", sum / i);
    else
 	   if (sum / i >= 80)
-		   printf ("Средняя оценка %d - B", sum / i);
+		   printf ("РЎСЂРµРґРЅСЏСЏ РѕС†РµРЅРєР° %d - B", sum / i);
 	   else
 		   if (sum / i >= 70)
-		      printf ("Средняя оценка %d - C", sum / i);
+		      printf ("РЎСЂРµРґРЅСЏСЏ РѕС†РµРЅРєР° %d - C", sum / i);
 		   else
 			   if (sum / i >= 60)
-		          printf ("Средняя оценка %d - D", sum / i);
+		          printf ("РЎСЂРµРґРЅСЏСЏ РѕС†РµРЅРєР° %d - D", sum / i);
 			   else
 				   if (sum / i >= 50)
-		              printf ("Средняя оценка %d - F", sum / i);
+		              printf ("РЎСЂРµРґРЅСЏСЏ РѕС†РµРЅРєР° %d - F", sum / i);
 
    _getch ();
 } 
