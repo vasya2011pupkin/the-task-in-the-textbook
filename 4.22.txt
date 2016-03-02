@@ -1,0 +1,90 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <limits.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+   setlocale(LC_ALL, "Russian");
+
+   int grade, sum, i;
+   unsigned int aCount = 0; 
+   unsigned int bCount = 0; 
+   unsigned int cCount = 0; 
+   unsigned int dCount = 0; 
+   unsigned int fCount = 0; 
+
+   puts( "¬ведите симольные оценки"  );
+   puts( "¬ведите EOF символ дл€ выхода."  );
+
+   while ( ( grade = getchar() ) != EOF ) {
+      
+      
+      switch ( grade ) { 
+
+         case 'A': 
+         case 'a': 
+            ++aCount; 
+            break; 
+
+         case 'B': 
+         case 'b': 
+            ++bCount; 
+            break; 
+
+         case 'C': 
+         case 'c': 
+            ++cCount; 
+            break; 
+
+         case 'D': 
+         case 'd': 
+            ++dCount; 
+            break; 
+
+         case 'F': 
+         case 'f': 
+            ++fCount; 
+            break; 
+
+         case '\n': 
+         case '\t': 
+         case ' ': 
+            break; 
+
+         default: 
+            printf( "%s", "¬ведена неправильна€ буквенна€ оценка." ); 
+            puts( " ¬ведите новую оценку." ); 
+            break; 
+      } 
+   } 
+
+   puts( "\n»тоговые данные по каждой буквенной оценке:" );
+   printf( "A: %u\n", aCount ); 
+   printf( "B: %u\n", bCount ); 
+   printf( "C: %u\n", cCount ); 
+   printf( "D: %u\n", dCount ); 
+   printf( "F: %u\n", fCount ); 
+
+   sum = aCount * 90 + bCount * 80 + cCount * 70 + dCount * 60 + fCount * 50;
+   i = aCount + bCount + cCount + dCount + fCount;
+   
+   if (sum / i >= 90)
+	   printf ("—редн€€ оценка %d - A", sum / i);
+   else
+	   if (sum / i >= 80)
+		   printf ("—редн€€ оценка %d - B", sum / i);
+	   else
+		   if (sum / i >= 70)
+		      printf ("—редн€€ оценка %d - C", sum / i);
+		   else
+			   if (sum / i >= 60)
+		          printf ("—редн€€ оценка %d - D", sum / i);
+			   else
+				   if (sum / i >= 50)
+		              printf ("—редн€€ оценка %d - F", sum / i);
+
+   _getch ();
+} 
