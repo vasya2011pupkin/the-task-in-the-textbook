@@ -17,13 +17,13 @@ int main()
       printf ("\n%4s%21s\tСтавка: %.2f\n", "Год", "Сумма на депозите", stavka / 100.0);
 
       for (year = 1; year <= 10; year++) {
-			  st = 1;
-			  for (i = year; i >= 1; i--) {
-			    st *= (1.0 + stavka / 100.0);
-			  }
+        st = 1;
+	for (i = year; i >= 1; i--) {
+	  st *= (1.0 + stavka / 100.0);
+	}
 
-	      sumf = sumn * st;
-	      printf ("%4d%21d.%d\n", year, sumf / 100, sumf % 100);
+	sumf = sumn * st;
+	printf ("%4d%21d.%d\n", year, sumf / 100, sumf % 100);
       }
    }
 
